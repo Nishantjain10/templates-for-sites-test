@@ -9,7 +9,7 @@ export default ({ children }: { children: React.ReactNode }) => (
         menu={Menu}
         sx={{
             backgroundColor: theme =>
-                // @ts-expect-error TS mixes up the Theme type from all the different versions of MUI in the monorepo
+                // @ts-ignore Theme type mixing between different MUI versions
                 (theme.vars || theme).palette.background.default,
         }}
     >
