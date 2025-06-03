@@ -41,10 +41,10 @@ export default defineConfig(async ({ mode }) => {
     return {
         plugins: [
             react(),
-            visualizer({
-                open: process.env.NODE_ENV !== 'CI',
-                filename: './dist/stats.html',
-            }),
+            // visualizer({
+            //     open: process.env.NODE_ENV !== 'CI',
+            //     filename: './dist/stats.html',
+            // }),
         ],
         define: {
             'process.env': process.env,
@@ -58,7 +58,7 @@ export default defineConfig(async ({ mode }) => {
             keepNames: true,
         },
         build: {
-            sourcemap: true,
+            // sourcemap: true,
             rollupOptions: {
                 plugins: [preserveDirectives()],
             },
